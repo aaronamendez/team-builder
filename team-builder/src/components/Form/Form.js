@@ -36,6 +36,7 @@ const Form = ({ team, setTeam }) => {
 			setError("All Fields Are Required!");
 		} else {
 			setTeam(team.concat(newTeamMember));
+			setError("");
 		}
 	};
 

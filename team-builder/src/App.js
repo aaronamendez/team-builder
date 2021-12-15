@@ -18,7 +18,7 @@ function App() {
 	}, []);
 
 	return (
-		<div>
+		<div className="app">
 			<h1>Team Builder App</h1>
 			<Form team={teamMembers} setTeam={setTeamMembers} />
 			<TeamList team={teamMembers} />

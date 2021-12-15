@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// Dependencies
+import React, { useEffect, useState } from "react";
+
+// Components
+import TeamList from "./components/TeamList/TeamList";
+
+import { data } from "./Constants";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [teamMembers, setTeamMembers] = useState([]);
+
+	useEffect(() => {
+		console.log(data);
+		setTeamMembers(data);
+	}, []);
+
+	return (
+		<div>
+			<h1>Team Builder App</h1>
+			<TeamList team={teamMembers} />
+		</div>
+	);
 }
 
 export default App;

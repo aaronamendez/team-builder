@@ -1,0 +1,24 @@
+.team-list {
+	display: flex;
+	justify-content: space-around;
+}
+
+.card {
+	border: 3px solid black;
+	width: 30%;
+}
+
+.card h3 {
+	text-align: center;
+}
+
+.card p {
+	padding: 0.5em;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
